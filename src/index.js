@@ -5,11 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import configureStore from "./redux/configureStore";
 import {Provider as ReduxProvider} from 'react-redux';
+import {BrowserRouter} from "react-router-dom";
 const  store=configureStore();
 
 ReactDOM.render(
     <ReduxProvider store={store}>
+        <BrowserRouter>
     <App />
+    </BrowserRouter>
     </ReduxProvider>
     , document.getElementById('root')
 
